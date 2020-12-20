@@ -3,7 +3,7 @@
 #include <windows.h>
 
 void prime_calculator() {
-	//PURPOSE: Calculate prime numbers from 1 to the inputted value. Also calculate whether a prime is palindromic and if the sum of its digits is prime
+	//PURPOSE: Calculate prime numbers from 1 to the inputted value. Also calculate whether a prime is palindromic and if the sum of its digits is odd
 	//INPUT: User inputted unsigned long long value which is used in the prime calculation process
 	//OUTPUT: All primes from 1 to the inputted value, the palindromic primes, and primes with an odd sum of digits are printed
 	unsigned long long input = 0; //declares and initializes input value to 0. This is the variable that will be used to accept the user's input
