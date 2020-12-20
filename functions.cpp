@@ -1,30 +1,6 @@
-#include "a2_q1_functions.h"
+#include "functions.h"
 #include <iostream>
 #include <windows.h>
-
-/*
-Program steps:
-1. Receive a user inputted value
-2. Increment from 1 to that user inputted value
-3. Everytime the number is incremented, check if that number is a prime number
-4. To check if its a prime number, increment backwards and check if it is divisble by anything other than itself and 1
-5. For every prime number, check if the prime is also a palindrome
-6. Do this by reversing the number and checking if its equal to the original number
-7. Then, check if the prime has an odd sum of digits by summing the digits and checking if they're odd
-8. Output all primes and whether they have an odd sum and if they are palindromic
-*/
-/*
-Values tested (Using an online prime checker):
-151 <- prime, palindromic, and an odd sum of digits
-103 <- prime
-919 <- prime, palindromic, and an odd sum of digits
-9967 <- prime and an odd sum of digits
-99991 <- prime and an odd sum of digits
-
-Valid range of value entries: 1 to 18,446,744,073,709,551,615. 
-Note: As the size of the prime increases, the program slows down a lot. 
-To get to a number such as 500000, it takes multiple minutes to get there. 
-*/
 
 void prime_calculator() {
 	//PURPOSE: Calculate prime numbers from 1 to the inputted value. Also calculate whether a prime is palindromic and if the sum of its digits is prime
