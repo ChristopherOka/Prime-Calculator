@@ -1,86 +1,8 @@
 #include <iostream>
-#include "a2_q2_functions.h"
+#include "functions.h"
 #include <iomanip>
 #include <math.h>
 
-/*
-Program steps:
-1. Accept a user inputted distance
-2. Calcuate the distance travelled from 0 to 1 second of falling, then 1 to 2 and onwards until the ball hits the ground (displacement = 0)
-3. Increase the time increment as the ball nears the ground. (0.9, 0.8...)
-4. Increment further as necessary (0.09, 0.08...)
-4. Output all these values
-*/
-/*
-This program will work for all values from 0 - 100000.
-Tested values (using a calculator):
-100 <- works
-1234 <- works
-Output for 15000 (which also works): 
-Time (s)        Current distance (m)    Total distance (m)
-0               0                       0
-1.000           4.903                   4.903
-2.000           14.710                  19.613
-3.000           24.517                  44.130
-4.000           34.323                  78.453
-5.000           44.130                  122.583
-6.000           53.937                  176.520
-7.000           63.743                  240.263
-8.000           73.550                  313.813
-9.000           83.357                  397.169
-10.000          93.163                  490.332
-11.000          102.970                 593.302
-12.000          112.776                 706.079
-13.000          122.583                 828.662
-14.000          132.390                 961.052
-15.000          142.196                 1103.248
-16.000          152.003                 1255.251
-17.000          161.810                 1417.061
-18.000          171.616                 1588.677
-19.000          181.423                 1770.100
-20.000          191.230                 1961.330
-21.000          201.036                 2162.366
-22.000          210.843                 2373.209
-23.000          220.650                 2593.859
-24.000          230.456                 2824.315
-25.000          240.263                 3064.578
-26.000          250.070                 3314.648
-27.000          259.876                 3574.524
-28.000          269.683                 3844.207
-29.000          279.490                 4123.696
-30.000          289.296                 4412.993
-31.000          299.103                 4712.095
-32.000          308.909                 5021.005
-33.000          318.716                 5339.721
-34.000          328.523                 5668.244
-35.000          338.329                 6006.573
-36.000          348.136                 6354.709
-37.000          357.943                 6712.652
-38.000          367.749                 7080.401
-39.000          377.556                 7457.957
-40.000          387.363                 7845.320
-41.000          397.169                 8242.489
-42.000          406.976                 8649.465
-43.000          416.783                 9066.248
-44.000          426.589                 9492.837
-45.000          436.396                 9929.233
-46.000          446.203                 10375.436
-47.000          456.009                 10831.445
-48.000          465.816                 11297.261
-49.000          475.623                 11772.883
-50.000          485.429                 12258.313
-51.000          495.236                 12753.548
-52.000          505.042                 13258.591
-53.000          514.849                 13773.440
-54.000          524.656                 14298.096
-55.000          534.462                 14832.558
-55.000          53.888                  14832.558
-55.100          53.986                  14886.544
-55.200          54.084                  14940.627
-55.300          54.182                  14994.809
-55.310          5.191                   15000.000
-
-*/
 
 void distance_calculator() { //this function will calculate the distance in time intervals that the ball travels as it falls
 	//PURPOSE: Calculates the distance in time intervals that a ball dropped from a height travels as it falls towards Earth
